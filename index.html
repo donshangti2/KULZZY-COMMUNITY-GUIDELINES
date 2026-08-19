@@ -904,79 +904,140 @@ footer {
 
 <script>
 
+<script>
+
+/* =========================
+   FOOTER YEAR
+========================= */
+
 document.getElementById("year").textContent =
     new Date().getFullYear();
 
 
-/* Agreement message */
+/* =========================
+   AGREEMENT CHECKBOX
+========================= */
 
-document.getElementById("agree").addEventListener("change", function() {
+document.getElementById("agree").addEventListener(
+    "change",
+    function () {
 
-    if (this.checked) {
+        if (this.checked) {
 
-        alert(
-            "Thank you for taking the time to read the Kulzzy Radio Network Community Guidelines. ❤️"
+            alert(
+                "Thank you for taking the time to read the Kulzzy Radio Network Community Guidelines. ❤️"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================
+   KULZZY AUTO HEIGHT
+========================= */
+
+(function () {
+
+    function sendHeight() {
+
+        var bodyHeight =
+            document.body
+                ? document.body.scrollHeight
+                : 0;
+
+        var documentHeight =
+            document.documentElement
+                ? document.documentElement.scrollHeight
+                : 0;
+
+        var height =
+            Math.max(
+                bodyHeight,
+                documentHeight
+            );
+
+        window.parent.postMessage(
+            {
+                type: "KULZZY_GUIDELINES_HEIGHT",
+                height: height
+            },
+            "*"
         );
 
     }
 
-});
-<script>
-(function () {
 
-  function sendHeight() {
+    /* Page loaded */
+    window.addEventListener(
+        "load",
+        function () {
 
-    var height =
-      Math.max(
-        document.body.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight,
-        document.documentElement.clientHeight
-      );
+            sendHeight();
 
-    window.parent.postMessage(
-      {
-        type: "KULZZY_GUIDELINES_HEIGHT",
-        height: height
-      },
-      "https://www.blogger.com"
+            setTimeout(
+                sendHeight,
+                300
+            );
+
+            setTimeout(
+                sendHeight,
+                1000
+            );
+
+            setTimeout(
+                sendHeight,
+                2000
+            );
+
+            setTimeout(
+                sendHeight,
+                4000
+            );
+
+        }
     );
-  }
 
-  /* Send height when page loads */
-  window.addEventListener(
-    "load",
-    function () {
-      sendHeight();
 
-      /* Send again after images/fonts finish loading */
-      setTimeout(sendHeight, 300);
-      setTimeout(sendHeight, 1000);
-      setTimeout(sendHeight, 2000);
+    /* Watch for page size changes */
+    if (
+        typeof ResizeObserver !==
+        "undefined"
+    ) {
+
+        var observer =
+            new ResizeObserver(
+                function () {
+
+                    sendHeight();
+
+                }
+            );
+
+        observer.observe(
+            document.documentElement
+        );
+
+        if (document.body) {
+
+            observer.observe(
+                document.body
+            );
+
+        }
+
     }
-  );
 
-  /* Watch for content changes */
-  if (window.ResizeObserver) {
 
-    var observer =
-      new ResizeObserver(function () {
-        sendHeight();
-      });
-
-    observer.observe(
-      document.documentElement
+    /* Extra safety check */
+    setInterval(
+        sendHeight,
+        2000
     );
-  }
-
-  /* Also check periodically */
-  setInterval(
-    sendHeight,
-    1000
-  );
 
 })();
 </script>
+
 </body>
 </html>
