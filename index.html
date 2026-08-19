@@ -921,8 +921,62 @@ document.getElementById("agree").addEventListener("change", function() {
     }
 
 });
+<script>
+(function () {
 
+  function sendHeight() {
+
+    var height =
+      Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight,
+        document.documentElement.clientHeight
+      );
+
+    window.parent.postMessage(
+      {
+        type: "KULZZY_GUIDELINES_HEIGHT",
+        height: height
+      },
+      "https://www.blogger.com"
+    );
+  }
+
+  /* Send height when page loads */
+  window.addEventListener(
+    "load",
+    function () {
+      sendHeight();
+
+      /* Send again after images/fonts finish loading */
+      setTimeout(sendHeight, 300);
+      setTimeout(sendHeight, 1000);
+      setTimeout(sendHeight, 2000);
+    }
+  );
+
+  /* Watch for content changes */
+  if (window.ResizeObserver) {
+
+    var observer =
+      new ResizeObserver(function () {
+        sendHeight();
+      });
+
+    observer.observe(
+      document.documentElement
+    );
+  }
+
+  /* Also check periodically */
+  setInterval(
+    sendHeight,
+    1000
+  );
+
+})();
 </script>
-
 </body>
 </html>
