@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="theme-color"
+    content="#07152f"
+>
+
+<meta
+    name="description"
+    content="Kulzzy Radio Network Community Guidelines - Celebrating Lives Everyday"
+>
+
+<title>Kulzzy Radio Network | Community Guidelines</title>
+
+
+<style>
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   HTML / BODY
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   TOP BAR
+   ========================================= */
+
+.top-bar {
+    background: #06132d;
+    color: #ffffff;
+    padding: 10px 18px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: .4px;
+}
+
+.top-bar span {
+    color: #ffd33d;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(3, 17, 43, .84),
+            rgba(3, 17, 43, .88)
+        ),
+        url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.logo-circle {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd43b,
+            #f5a900
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 43px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.35);
+}
+
+
+.hero h1 {
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            34px,
+            6vw,
+            64px
+        );
+
+    line-height: 1.05;
+    margin-bottom: 14px;
+    font-weight: 900;
+}
+
+
+.hero h1 span {
+    color: #ffd33d;
+}
+
+
+.hero-subtitle {
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            17px,
+            2.5vw,
+            23px
+        );
+
+    margin-bottom: 25px;
+}
+
+
+.hero-description {
+    max-width: 680px;
+    margin: auto;
+    color: #dce6f8;
+    font-size: 16px;
+}
+
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background: #ffd33d;
+
+    color: #07152f;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    transition: .25s;
+}
+
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    background: #ffffff;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.container {
+    width: min(1100px, 94%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   INTRO
+   ========================================= */
+
+.intro {
+    margin-top: -45px;
+
+    position: relative;
+    z-index: 5;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.10);
+
+    text-align: center;
+}
+
+
+.intro h2 {
+    color: #07152f;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+
+.intro h2 span {
+    color: #e5a900;
+}
+
+
+.intro p {
+    max-width: 850px;
+    margin: auto;
+    color: #5b6475;
+}
+
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.section-heading {
+    text-align: center;
+    margin: 65px 0 30px;
+}
+
+
+.section-heading h2 {
+    font-size: 32px;
+    color: #07152f;
+    margin-bottom: 8px;
+}
+
+
+.section-heading p {
+    color: #6c7482;
+}
+
+
+/* =========================================
+   GUIDELINE CARDS
+   ========================================= */
+
+.guidelines {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 7px 25px rgba(0,0,0,.07);
+
+    border:
+        1px solid #edf0f5;
+
+    transition:
+        transform .25s,
+        box-shadow .25s;
+}
+
+
+.card:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.11);
+}
+
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 15px;
+
+    background: #07152f;
+
+    color: #ffd33d;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+
+    margin-bottom: 18px;
+}
+
+
+.card h3 {
+    color: #07152f;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    color: #606a7b;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FEATURE IMAGE
+   ========================================= */
+
+.feature-image {
+    margin: 55px 0;
+
+    min-height: 360px;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(3,17,43,.55),
+            rgba(3,17,43,.65)
+        ),
+        url("https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.feature-content {
+    color: #ffffff;
+
+    max-width: 700px;
+
+    padding: 30px;
+}
+
+
+.feature-content h2 {
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            45px
+        );
+
+    margin-bottom: 15px;
+}
+
+
+.feature-content h2 span {
+    color: #ffd33d;
+}
+
+
+.feature-content p {
+    color: #edf3ff;
+}
+
+
+/* =========================================
+   NOTICE
+   ========================================= */
+
+.notice {
+    margin: 40px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07152f,
+            #0c2754
+        );
+
+    color: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 32px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.notice::after {
+    content: "♥";
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: -30px;
+
+    font-size: 150px;
+
+    color:
+        rgba(255,211,61,.08);
+}
+
+
+.notice h2 {
+    color: #ffd33d;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   COMMUNITY PROMISE
+   ========================================= */
+
+.promise {
+    margin: 65px 0;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.08);
+}
+
+
+.promise-icon {
+    font-size: 52px;
+    margin-bottom: 12px;
+}
+
+
+.promise h2 {
+    font-size: 32px;
+    color: #07152f;
+    margin-bottom: 15px;
+}
+
+
+.promise h2 span {
+    color: #dca400;
+}
+
+
+.promise p {
+    max-width: 800px;
+    margin: auto;
+    color: #626b7b;
+}
+
+
+/* =========================================
+   AGREEMENT
+   ========================================= */
+
+.agreement {
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    margin-bottom: 60px;
+
+    border:
+        2px solid #f0c832;
+}
+
+
+.agreement-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.agreement-check {
+    width: 25px;
+    height: 25px;
+
+    accent-color: #07152f;
+
+    cursor: pointer;
+}
+
+
+.agreement label {
+    font-weight: 600;
+    color: #303949;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: #06132d;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 42px 20px;
+
+    margin: 0;
+}
+
+
+.footer-title {
+    font-size: 25px;
+
+    font-weight: 900;
+
+    margin-bottom: 8px;
+}
+
+
+.footer-title span {
+    color: #ffd33d;
+}
+
+
+.footer-motto {
+    color: #ffd33d;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+
+.footer-text {
+    color: #bfc9dc;
+
+    font-size: 14px;
+}
+
+
+.footer-line {
+    width: 70px;
+
+    height: 3px;
+
+    background: #ffd33d;
+
+    margin: 20px auto;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    .hero {
+        min-height: 540px;
+        padding: 60px 18px;
+    }
+
+
+    .logo-circle {
+        width: 78px;
+        height: 78px;
+        font-size: 35px;
+    }
+
+
+    .intro {
+        margin-top: -35px;
+        padding: 27px 20px;
+    }
+
+
+    .guidelines {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+        padding: 24px;
+    }
+
+
+    .feature-image {
+        min-height: 420px;
+    }
+
+
+    .notice {
+        padding: 27px 22px;
+    }
+
+
+    .promise {
+        padding: 35px 22px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .hero {
+        min-height: 580px;
+    }
+
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+
+    .card p {
+        font-size: 14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- =========================================
+     TOP BAR
+     ========================================= -->
+
+<div class="top-bar">
+
+    <span>
+        🎙️ KULZZY RADIO NETWORK
+    </span>
+
+    &nbsp; • &nbsp;
+
+    Celebrating Lives Everyday
+
+</div>
+
+
+<!-- =========================================
+     HERO
+     ========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="logo-circle">
+            🎙️
+        </div>
+
+
+        <h1>
+            Our <span>Community</span>
+        </h1>
+
+
+        <div class="hero-subtitle">
+
+            Guidelines for a respectful,
+            positive and connected community.
+
+        </div>
+
+
+        <p class="hero-description">
+
+            Kulzzy Radio Network is a community
+            where people come together to celebrate
+            lives, share moments, connect with others
+            and enjoy great radio. These guidelines
+            help us keep the community safe,
+            welcoming and enjoyable for everyone.
+
+        </p>
+
+
+        <a
+            href="#guidelines"
+            class="hero-button"
+        >
+
+            Read Our Guidelines ↓
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     MAIN CONTENT
+     ========================================= -->
+
+<main class="container">
+
+
+<!-- =========================================
+     INTRODUCTION
+     ========================================= -->
+
+<section class="intro">
+
+    <h2>
+
+        Welcome to the
+        <span>Kulzzy Community</span>
+
+    </h2>
+
+
+    <p>
+
+        Whether you are a listener, celebrant,
+        business owner, supporter, creator or
+        visitor, you are welcome here. Our
+        community is built around respect,
+        positivity, celebration and meaningful
+        connection.
+
+    </p>
+
+</section>
+
+
+<!-- =========================================
+     GUIDELINES TITLE
+     ========================================= -->
+
+<div
+    class="section-heading"
+    id="guidelines"
+>
+
+    <h2>
+        Community Guidelines
+    </h2>
+
+
+    <p>
+
+        A few simple rules help us keep
+        Kulzzy Radio Network enjoyable
+        for everyone.
+
+    </p>
+
+</div>
+
+
+<!-- =========================================
+     GUIDELINES
+     ========================================= -->
+
+<section class="guidelines">
+
+
+<!-- 1 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        🤝
+    </div>
+
+    <h3>
+        1. Respect Everyone
+    </h3>
+
+    <p>
+
+        Treat listeners, presenters,
+        celebrants, businesses and other
+        community members with respect.
+        Personal attacks, bullying,
+        harassment, intimidation and
+        deliberate attempts to embarrass
+        others are not permitted.
+
+    </p>
+
+</article>
+
+
+<!-- 2 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        ❤️
+    </div>
+
+    <h3>
+        2. Keep It Positive
+    </h3>
+
+    <p>
+
+        Kulzzy Radio Network is built
+        around celebration, entertainment,
+        information and positive community
+        engagement. Help us create an
+        environment that lifts people up
+        rather than bringing them down.
+
+    </p>
+
+</article>
+
+
+<!-- 3 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        🚫
+    </div>
+
+    <h3>
+        3. No Spam
+    </h3>
+
+    <p>
+
+        Do not flood our community with
+        repeated messages, links, promotions
+        or advertisements. Businesses
+        interested in advertising and
+        sponsorship should use the
+        appropriate Kulzzy Radio Network
+        channels.
+
+    </p>
+
+</article>
+
+
+<!-- 4 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        🔐
+    </div>
+
+    <h3>
+        4. Respect Privacy
+    </h3>
+
+    <p>
+
+        Never publicly share another
+        person's private information,
+        phone number, address, private
+        conversations, passwords or
+        photographs without permission.
+
+    </p>
+
+</article>
+
+
+<!-- 5 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        🎂
+    </div>
+
+    <h3>
+        5. Birthday & Celebration Messages
+    </h3>
+
+    <p>
+
+        We love celebrating birthdays,
+        achievements and special occasions.
+        Please submit genuine and appropriate
+        information. Do not use celebration
+        features to impersonate people,
+        submit malicious messages or
+        deliberately spread false information.
+
+    </p>
+
+</article>
+
+
+<!-- 6 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        👤
+    </div>
+
+    <h3>
+        6. No Impersonation
+    </h3>
+
+    <p>
+
+        Do not pretend to be Kulzzy Radio
+        Network, a presenter, staff member,
+        celebrant, business owner or another
+        community member. Official
+        announcements come through authorized
+        Kulzzy Radio Network channels.
+
+    </p>
+
+</article>
+
+
+<!-- 7 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        👨‍👩‍👧‍👦
+    </div>
+
+    <h3>
+        7. Keep Content Appropriate
+    </h3>
+
+    <p>
+
+        Content submitted to our platforms
+        should be suitable for a broad
+        audience. Sexually explicit material,
+        threats, extreme abusive content,
+        hate-based content and material
+        encouraging illegal activity are
+        not permitted.
+
+    </p>
+
+</article>
+
+
+<!-- 8 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        ✓
+    </div>
+
+    <h3>
+        8. Be Honest
+    </h3>
+
+    <p>
+
+        Do not deliberately submit false
+        information, fake announcements,
+        fraudulent promotions or misleading
+        claims about another person or
+        business. Share information
+        responsibly.
+
+    </p>
+
+</article>
+
+
+<!-- 9 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        📢
+    </div>
+
+    <h3>
+        9. Business & Promotions
+    </h3>
+
+    <p>
+
+        We welcome legitimate businesses
+        and entrepreneurs. Promotional
+        content should be submitted through
+        the appropriate Kulzzy Radio Network
+        advertising and promotional channels
+        rather than repeatedly posted in
+        community spaces.
+
+    </p>
+
+</article>
+
+
+<!-- 10 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        ⚠️
+    </div>
+
+    <h3>
+        10. Report Problems
+    </h3>
+
+    <p>
+
+        If you encounter abusive,
+        inappropriate, misleading or
+        suspicious content, report it to
+        the Kulzzy Radio Network team
+        rather than starting unnecessary
+        arguments.
+
+    </p>
+
+</article>
+
+
+<!-- 11 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        🛡️
+    </div>
+
+    <h3>
+        11. Community Moderation
+    </h3>
+
+    <p>
+
+        Kulzzy Radio Network may review,
+        remove or restrict content or
+        participation that violates these
+        guidelines. Serious violations
+        may result in immediate action.
+
+    </p>
+
+</article>
+
+
+<!-- 12 -->
+
+<article class="card">
+
+    <div class="card-icon">
+        🌟
+    </div>
+
+    <h3>
+        12. Be Part of Something Positive
+    </h3>
+
+    <p>
+
+        Every listener and community member
+        contributes to the atmosphere of
+        Kulzzy Radio Network. Share kindness,
+        celebrate others, support legitimate
+        businesses and help make our community
+        a place people want to return to.
+
+    </p>
+
+</article>
+
+
+</section>
+
+
+<!-- =========================================
+     FEATURE IMAGE
+     ========================================= -->
+
+<section class="feature-image">
+
+    <div class="feature-content">
+
+        <h2>
+
+            Together We
+            <span>Celebrate</span>
+
+        </h2>
+
+
+        <p>
+
+            From birthday celebrations to
+            business promotions, achievements,
+            special announcements and everyday
+            moments, Kulzzy Radio Network exists
+            to give people a reason to connect
+            and celebrate.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     MODERATION NOTICE
+     ========================================= -->
+
+<section class="notice">
+
+    <h2>
+        🛡️ Our Moderation Promise
+    </h2>
+
+
+    <p>
+
+        We want everyone to feel comfortable
+        participating in the Kulzzy community.
+        Content that seriously violates our
+        guidelines may be removed, and accounts
+        or participants may be restricted from
+        community features where necessary.
+
+    </p>
+
+
+    <br>
+
+
+    <p>
+
+        Our team may take action when content
+        threatens the safety, privacy, dignity
+        or positive atmosphere of the community.
+
+    </p>
+
+</section>
+
+
+<!-- =========================================
+     KULZZY PROMISE
+     ========================================= -->
+
+<section class="promise">
+
+    <div class="promise-icon">
+        🎙️❤️
+    </div>
+
+
+    <h2>
+
+        The
+        <span>Kulzzy Promise</span>
+
+    </h2>
+
+
+    <p>
+
+        Kulzzy Radio Network is more than a
+        radio platform. We are building a
+        community where people can be heard,
+        celebrated, informed and connected.
+
+        <br><br>
+
+        Whether you are celebrating a birthday,
+        promoting a business, supporting a friend,
+        listening to a programme or simply
+        joining the conversation, you are
+        welcome here.
+
+    </p>
+
+</section>
+
+
+<!-- =========================================
+     AGREEMENT
+     ========================================= -->
+
+<section class="agreement">
+
+    <div class="agreement-row">
+
+        <input
+            type="checkbox"
+            class="agreement-check"
+            id="agree"
+        >
+
+
+        <label for="agree">
+
+            I have read and understand the
+            Kulzzy Radio Network Community
+            Guidelines.
+
+        </label>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer>
+
+    <div class="footer-title">
+
+        KULZZY
+        <span>RADIO NETWORK</span>
+
+    </div>
+
+
+    <div class="footer-motto">
+
+        Celebrating Lives Everyday
+
+    </div>
+
+
+    <div class="footer-line"></div>
+
+
+    <p class="footer-text">
+
+        Thank you for being part of
+        the Kulzzy community.
+
+    </p>
+
+
+    <p class="footer-text">
+
+        ©
+        <span id="year"></span>
+        Kulzzy Radio Network.
+        All rights reserved.
+
+    </p>
+
+</footer>
+
+
+<!-- =========================================
+     YEAR SCRIPT
+     ========================================= -->
+
+<script>
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+
+</html>
